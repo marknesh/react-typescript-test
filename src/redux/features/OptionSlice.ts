@@ -4,7 +4,7 @@ const initialState = {
   value: '',
 };
 
-export const authSlice = createSlice({
+export const optionSlice = createSlice({
   name: 'option',
   initialState,
   reducers: {
@@ -16,6 +16,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { addOption } = authSlice.actions;
+export const { addOption } = optionSlice.actions;
 
-export default authSlice.reducer;
+export default optionSlice.reducer;
