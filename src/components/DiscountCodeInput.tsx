@@ -10,10 +10,16 @@ const DiscountCodeInput = () => {
 
   const handleDiscountCodeSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!discountCode.trim()) {
+      return alert('Please enter a discount code');
+    }
     if (validateDiscountCode(discountCode)) {
       alert('Discount added successfully');
     } else {
-      alert('Discount code does not match pattern');
+      alert(
+        'Discount code does not match pattern of "DISCOUNT followed by 4 digits"'
+      );
     }
   };
   return (

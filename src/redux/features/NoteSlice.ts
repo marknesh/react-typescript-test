@@ -4,11 +4,11 @@ const initialState = {
   value: '',
 };
 
-const optionSlice = createSlice({
-  name: 'option',
+const noteSlice = createSlice({
+  name: 'note',
   initialState,
   reducers: {
-    addOption: (_, action: PayloadAction<string>) => {
+    addNote: (_, action: PayloadAction<string>) => {
       return {
         value: action.payload,
       };
@@ -16,6 +16,6 @@ const optionSlice = createSlice({
   },
 });
 
-export const { addOption } = optionSlice.actions;
+export const { addNote } = noteSlice.actions;
 
-export default optionSlice.reducer;
+export default noteSlice.reducer;
